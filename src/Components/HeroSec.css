@@ -1,0 +1,54 @@
+:root{
+    --bg:#FFFCDD;
+    --primary:#0C1331;
+    --secondary:#E4E424;
+    --mid-blue:#34459C;
+    --light-blue: #EAEFFF;
+}
+
+body{
+    font-family: poppins
+}
+.ml{
+    margin-left: 5%;
+
+}
+@font-face {
+    font-family: broadway;
+    src: url(../Assets/BROADW.TTF);
+}
+
+h1{
+  font-family: broadway;
+  font-weight: 500;  
+  font-size: 4vw;
+  color: var(--primary);
+  
+}
+
+.healine{
+    margin-left: 5%;
+}
+
+
+.heartz{
+    position: absolute;
+    margin-top: -12.2%;
+    width: 2%;
+    margin-left: 40%;
+}
+
+
+.starz{
+    position: absolute;
+   margin-top: -6.4%; 
+   margin-left: 20.5%;
+}
+
+
+p{
+    margin-left: 5%;
+    font-size: 1.5vw;
+    color: var(--primary);
+}
+

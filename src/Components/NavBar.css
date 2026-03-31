@@ -1,0 +1,48 @@
+:root{
+   --bg:#FFFCDD;
+   --primary:#0C1331;
+   --secondary:#E4E424;
+   --mid-blue:#34459C;
+   --light-blue: #EAEFFF;
+}
+
+ul{
+    display: flex;
+    gap: 10%;
+    margin: 15%;
+    margin-top: 2%;
+    align-items: center;
+    
+}
+
+li{
+    color: var(--primary);
+    list-style: none;
+    font-family:Poppins ;
+    font-style: bold;
+}
+
+.logonav{
+    width: 60%;
+}
+
+
+button{
+      font-family:Poppins ;
+    font-style: bold;
+    
+}
+
+
+.navbtns{
+    background-color: var(--primary);
+    color: var(--light-blue);
+    
+}
+
+body{
+    margin: 0;
+    background-color: var(--bg);
+}
+
+
