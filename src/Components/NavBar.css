@@ -12,8 +12,13 @@ ul{
     margin: 15%;
     margin-top: 2%;
     align-items: center;
+   
     
 }
+
+/* .fixed{
+    position: fixed;
+} */
 
 li{
     color: var(--primary);

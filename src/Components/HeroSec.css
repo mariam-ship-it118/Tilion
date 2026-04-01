@@ -26,6 +26,10 @@ h1{
   
 }
 
+.texthead{
+    width: 110%;
+}
+
 .healine{
     margin-left: 5%;
 }
@@ -33,16 +37,16 @@ h1{
 
 .heartz{
     position: absolute;
-    margin-top: -12.2%;
+    margin-top: -12.3%;
     width: 2%;
-    margin-left: 40%;
+    margin-left: 38%;
 }
 
 
 .starz{
     position: absolute;
    margin-top: -6.4%; 
-   margin-left: 20.5%;
+   margin-left: 18.5%;
 }
 
 
@@ -51,4 +55,58 @@ p{
     font-size: 1.5vw;
     color: var(--primary);
 }
+.fixm{
+    margin: 0;
+}
 
+.pcontrol{
+    display: flex;
+    gap: 1%;
+    border: 2px solid var(--primary);
+    width: 42%;
+    padding: 1%;
+    border-radius: 1vw 2vw 2vw 2vw;
+    margin-left: 5%;
+}
+
+
+.hero{
+    display: flex;
+    gap: 25%;
+    
+
+}
+
+.download{
+    font-family: broadway;
+    font-size: 2vw;
+    margin-left: 5%;
+    margin-top: 5%;
+    background-color: var(--primary);
+    color: var(--light-blue);
+    padding: 1%;
+     padding-left:  3%;
+    padding-right: 3%;
+}
+
+
+
+.download:hover{
+    font-family: broadway;
+    font-size: 2vw;
+    margin-left: 5%;
+    margin-top: 5%;
+    border:2px solid var(--primary);
+    color: var(--primary);
+    box-shadow: #34459c64 2px 0px 24px;
+    transform: translateY(-5px);
+    transition-duration: 800ms;
+
+   
+    background-color: transparent;
+}
+
+
+.widdy{
+    width: 100%;
+}

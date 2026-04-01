@@ -1,0 +1,51 @@
+:root{
+    --bg:#FFFCDD;
+    --primary:#0C1331;
+    --secondary:#E4E424;
+    --high-bleu: #247EE4;
+    --mid-blue:#34459C;
+    --light-blue: #EAEFFF;
+}
+.servhead{
+    font-family: broadway;
+    font-weight: 500;
+    font-size: 2vw;
+  color: var(--primary);
+}
+
+.servpara{
+    color: var(--primary);
+}
+
+.Thetitle{
+    display: flex;
+}
+
+.card-serv{
+    width: 30%;
+}
+
+.disa{
+    display: flex;
+    margin-left: 5%;
+}
+
+.separation{
+      display: block;
+  margin: 0 auto;
+  margin-top: 5%;
+}
+
+
+.center{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.arimg{
+    width: 100%;
+    margin: 0;
+    margin-top: 5%;
+}

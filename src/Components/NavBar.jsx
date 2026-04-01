@@ -14,7 +14,7 @@ const NavBar = () => {
           rel="stylesheet"
         />
       </Helmet>
-    <ul>
+    <ul className='fixed'>
         <li>Home</li>
         <li>About</li>
         <li><img src={Logo} className='logonav' alt="Social media app for kids" /></li>
