@@ -19,7 +19,7 @@ const Home = () => {
 <YThisApp />
 
 {/* ar section */}
-{/* <img src={Ar} alt="Safe for kids" className='arimg' /> */}
+<img src={Ar} alt="Safe for kids" className='arimg' />
 
 
     </> );
