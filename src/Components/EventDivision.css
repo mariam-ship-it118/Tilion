@@ -1,0 +1,19 @@
+:root{
+    --bg:#FFFCDD;
+    --primary:#0C1331;
+    --secondary:#E4E424;
+    --high-bleu: #247EE4;
+    --mid-blue:#34459C;
+    --light-blue: #EAEFFF;
+}
+
+
+.secnames{
+    font-family: broadway;
+    font-weight: 500;
+    font-size: 2vw;
+    margin-left: 5%;
+    color: var(--primary);
+    margin-top: 5%;
+}
+

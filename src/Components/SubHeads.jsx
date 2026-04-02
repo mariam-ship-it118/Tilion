@@ -10,6 +10,9 @@ const SubHeadz = (props) => {
         <div class="line"></div>
     </div>
     
+ 
+     
+
     </> );
 }
  

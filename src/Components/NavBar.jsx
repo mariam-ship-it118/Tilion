@@ -18,7 +18,7 @@ const NavBar = () => {
         <li>Home</li>
         <li>About</li>
         <li><img src={Logo} className='logonav' alt="Social media app for kids" /></li>
-        <li>Contact</li>
+        <li>Events</li>
         <li>FAQs</li>
         <li><button className='navbtns'>Login</button></li>
         <li><button className='navbtns'>ar</button></li>

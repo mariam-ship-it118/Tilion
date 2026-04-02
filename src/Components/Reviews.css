@@ -1,0 +1,66 @@
+:root{
+   --bg:#FFFCDD;
+   --primary:#0C1331;
+   --secondary:#E4E424;
+   --mid-blue:#34459C;
+   --light-blue: #EAEFFF;
+}
+
+
+
+/* Parent container to clip overflow */
+.scroll-container {
+  overflow: hidden;
+  width: 100%;
+  margin-left: 5%;
+  white-space: nowrap;
+  display: flex;
+  gap: 8%;
+}
+
+/* Inner scroller with two identical sets of items */
+.scroll-content {
+
+   width: fit-content;
+  animation: scroll-left 20s linear infinite; 
+  width: 30%;
+}
+
+/* Move half the total width (one full set of items) */
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Pause on hover for better UX */
+.scroll-container:hover .scroll-content {
+  animation-play-state: paused;
+}
+
+.margindelete{
+    margin: 0;
+}
+
+.accountrev{
+    display: flex;
+
+
+}
+.comment{
+    font-size: 1.2vw;
+    margin-top: 4%;
+}
+
+.names{
+    font-family: broadway;
+    font-weight: 500;
+    font-size: 1.8vw;
+    color: var(--primary);
+}
+
+
+.card{
+    border: 2px solid var(--primary);
+    width: 115%;
+  
+}

@@ -1,0 +1,46 @@
+:root{
+    --bg:#FFFCDD;
+    --primary:#0C1331;
+    --secondary:#E4E424;
+    --high-bleu: #247EE4;
+    --mid-blue:#34459C;
+    --light-blue: #EAEFFF;
+}
+
+.banner-container {
+  /* Light cream background matching the image */
+  padding: 2rem 4rem;
+  display: inline-flex;
+}
+
+.banner-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-family: broadway;
+  font-size: 4rem;
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* The hollow/outlined text effect */
+.text-outline {
+  color: transparent;
+  /* Dark navy/black border */
+  -webkit-text-stroke: 2px var(--primary); 
+  text-stroke: 2px var(--primary);
+}
+
+/* The solid text effect */
+.text-solid {
+  color: var(--primary);
+}
+
+/* The yellow sparkle placement */
+.sparkle-icon {
+  width: 0.7em;
+  height: 0.7em;
+  margin-left: -0.1em;
+  /* Adjusts the vertical position to sit near the top of the text */
+  transform: translateY(-0.3em); 
+}

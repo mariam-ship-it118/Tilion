@@ -5,7 +5,6 @@ import Safety from "../Assets/s.svg";
 import Connect from "../Assets/c.svg"; 
 import SubHeadz from './SubHeads';
 import Serv from './Serv';
-import Septwo from "../Assets/sep2.svg";
 
 const Services = () => {
     return ( <>
@@ -20,7 +19,6 @@ const Services = () => {
 <Serv img={Active}  type="ctivities" para="they can practice any activity assigned by the parent into the child account and he get to choose from them."/>   
 </div>
 
-<img src={Septwo} alt="safe app fpr kids" className='separation' />
 
 
 

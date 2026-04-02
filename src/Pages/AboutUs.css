@@ -1,0 +1,79 @@
+/* Add this to the very top of your CSS file */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* Container styling and background */
+.about-us-section {
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  overflow: hidden; 
+}
+
+/* Fluid responsive typography container */
+.about-us-container {
+  display: flex;
+  align-items: center;
+  font-family: broadway;
+  font-size: clamp(4rem, 12vw, 12rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+/* Solid text styling for "About" */
+.text-solid-about {
+  color: #0b1126;
+  margin-right: 0.25em;
+}
+
+/* Wrapper to hold the offset text and SVG relative to "Us" */
+.text-outline-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* Primary outlined text for "Us" */
+.text-outline-us {
+  color: transparent; 
+  -webkit-text-stroke: 0.025em #0b1126;
+  position: relative;
+  z-index: 2;
+}
+
+/* Secondary offset line behind "Us" */
+.text-offset-us {
+  position: absolute;
+  top: 0.04em;
+  left: 0.04em;
+  color: transparent;
+  -webkit-text-stroke: 0.012em #0b1126;
+  z-index: 1;
+  user-select: none; 
+  pointer-events: none;
+}
+
+/* Sparkles positioning */
+.sparkles-graphic {
+  position: absolute;
+  top: -0.4em;
+  right: -0.6em;
+  width: 0.75em;
+  height: 0.75em;
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* Sparkles SVG paths styling */
+.sparkle-fill {
+  fill: #0b1126;
+}
+
+.sparkle-stroke {
+  fill: none;
+  stroke: #0b1126;
+  stroke-width: 1.5;
+}
