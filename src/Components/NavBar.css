@@ -6,7 +6,7 @@
     --mid-blue:#34459C;
     --light-blue: #EAEFFF;
 }
-ul{
+.navie{
     display: flex;
     gap: 10%;
     margin: 15%;

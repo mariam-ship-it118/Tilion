@@ -1,22 +1,9 @@
-import React, { Component } from 'react';
-import Child from "../Assets/aboutpic.svg";
-import "./AboutHome.css";
-import Btnz from './Btnz';
+import React from 'react';
+import './AboutUs.css'; // Make sure this path matches your CSS file location
 
-const AboutHome = () => {
-    return ( <>
-    
-
-    <div className='diss'>
-
-  
-    <img src={Child} alt="About Tilion"  className='boyabout' />
-    
-    <section className='abouttextcard'>
-
-  
-    
-   <div className="about-us-sector">
+const AboutMain = () => {
+  return (
+    <div className="about-us-section">
       <div className="about-us-container">
         <span className="text-solid-about">About</span>
         
@@ -46,20 +33,11 @@ const AboutHome = () => {
               className="sparkle-stroke" 
               transform="translate(2, 3)" 
             />
-          </svg>  
-        </div> 
+          </svg>
+        </div>
       </div>
     </div>
-    <p>We’re a team of creators, designers, and parents who believe imagination should be a safe place to play. We built this app to give kids a fun, colorful world where they can explore, create, and connect kindly. Everything here is designed with care, safety, and smiles in mind.</p>
-  <div className='explrebtn'>
+  );
+};
 
-    <Btnz btn="Explore"/>
-  </div>
-    </section>
-      </div>
-  
-
-    </> );
-}
- 
-export default AboutHome;
+export default AboutMain;

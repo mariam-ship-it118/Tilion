@@ -1,0 +1,33 @@
+:root{
+    --bg:#FFFCDD;
+    --primary:#0C1331;
+    --secondary:#E4E424;
+    --high-bleu: #247EE4;
+    --mid-blue:#34459C;
+    --light-blue: #EAEFFF;
+}
+
+.Thebtnz{
+    font-family: broadway;
+    font-size: 1.5vw;
+    font-weight: 500;
+    background-color:var(--primary) ;
+    color: var(--secondary);
+    padding: 1.5%;
+    padding-left: 2%;
+    padding-right:2% ;
+}
+
+
+
+
+.Thebtnz:hover{
+    
+  
+  
+  transform: translateY(-4%);
+  transform: scale(1.05);
+  transition-duration: 800ms;
+ 
+
+}

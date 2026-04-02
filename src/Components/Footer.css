@@ -1,0 +1,128 @@
+/* Import Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.footer-container {
+  font-family: 'Poppins', sans-serif;
+  color: #12182b;
+  padding: 60px 5% 40px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 160px;
+}
+
+.logo-col {
+  flex: 1.5;
+  display: flex;
+  align-items: flex-start;
+}
+
+.footer-logo {
+  max-width: 120px;
+  height: auto;
+}
+
+.footer-col h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  margin-top: 0;
+  color: #0b1120;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: #334155;
+  font-size: 15px;
+  font-weight: 400;
+  transition: color 0.2s ease-in-out;
+}
+
+.footer-col ul li a:hover {
+  color: #2563eb; /* Add a nice hover color */
+}
+
+/* Social Icons styling */
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.2s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Bottom Footer Styling */
+.footer-bottom {
+  max-width: 1200px;
+  margin: 60px auto 0;
+  text-align: center;
+  font-size: 14px;
+  color: #334155;
+}
+
+.bottom-links-row {
+  margin-bottom: 6px;
+}
+
+.bottom-links-row a {
+  text-decoration: none;
+  color: #334155;
+  margin: 0 4px;
+  font-weight: 500;
+}
+
+.bottom-links-row a:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+  
+  .logo-col {
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .social-icons {
+    justify-content: center;
+  }
+  
+  .footer-col h4 {
+    margin-bottom: 15px;
+  }
+}

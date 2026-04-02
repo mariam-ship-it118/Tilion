@@ -10,6 +10,10 @@ import Pro from "../Assets/profile.svg";
 import SubHeadz from '../Components/SubHeads';
 import "./Preloader.css";
 import Septwo from "../Assets/sep2.svg";
+import AboutHome from '../Components/AboutHome';
+import FAQsHome from '../Components/FAQsHome';
+import Contact from '../Components/Contact';
+import Footer from '../Components/Footer';
 
 
 const Home = () => {
@@ -44,8 +48,23 @@ const Home = () => {
 </section>
 </section>
 <img src={Septwo} alt="safe app fpr kids" className='separation' />
+<br /> <br /> <br />
+<div className='reposition'>
 
+<AboutHome/>
+</div>
+    <img src={Sep} className='widdy' alt="Social media app for kids" />
 
+<SubHeadz headz="FAQs" />
+
+<FAQsHome/>
+    <img src={Sep} className='widdy' alt="Social media app for kids" />
+
+    <SubHeadz headz="Contact" />
+ 
+ <Contact/>
+
+ <Footer/>
 
     </> );
 }

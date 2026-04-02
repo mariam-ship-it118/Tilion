@@ -11,15 +11,16 @@
   padding: 2rem;
   box-sizing: border-box;
   overflow: hidden; 
+  margin-top: -10%;
 }
 
 /* Fluid responsive typography container */
 .about-us-container {
   display: flex;
   align-items: center;
-  font-family: broadway;
+  font-family: 'Playfair Display', serif;
   font-size: clamp(4rem, 12vw, 12rem);
-  font-weight: 500;
+  font-weight: 800;
   line-height: 1;
   letter-spacing: -0.02em;
 }
