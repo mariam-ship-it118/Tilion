@@ -7,6 +7,7 @@ import Blog2 from "../Assets/blog2.svg";
 import Blog3 from "../Assets/blog3.svg";
 import Septwo from "../Assets/sep2.svg";
 import Footer from '../Components/Footer';
+import Highlights from '../Components/Hightlights';
 const Blogs = () => {
     return ( <>
     <NavBar active="blogs"/>
@@ -37,6 +38,7 @@ const Blogs = () => {
         time=""
         tag="1 april"
       /> 
+      <Highlights/>
 
 <Footer/>
 

@@ -12,6 +12,7 @@
     margin: 5%;
     margin-top: 2%;
     align-items: center;
+      font-weight: 500;
    
     
 }
@@ -20,83 +21,63 @@
 
 
 
-.li {
+li {
   text-decoration: none;
+  list-style-type: none;
 }
 
 /* Layout */
 .active{
      color: var(--high-bleu);
-   font-weight: 500;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .fixed{
-    position: fixed;
-} */
-
-li{
-    color: var(--primary);
-    list-style: none;
-    font-family:Poppins ;
-    font-style: bold;
-}
-
-.logonav{
-    width: 60%;
-}
-
-
-button{
-      font-family:Poppins ;
-    font-style: bold;
-    
-}
-
 
 .navbtns{
-    background-color: var(--primary);
-    color: var(--light-blue);
-    
+  background-color: var(--primary);
+  color: var(--secondary);
+  font-size: 1vw;
+  padding: 4%;
+  padding-left: 8%;
+  padding-right:8% ;
+
 }
 
-body{
-    margin: 0;
-    background-color: var(--bg);
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

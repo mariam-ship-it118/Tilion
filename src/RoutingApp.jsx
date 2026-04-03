@@ -7,6 +7,8 @@ import EventsMain from './Pages/Events';
 import AboutUs from './Pages/AboutUs';
 import FAQZ from './Pages/FAQs';
 import Blogs from './Pages/Blogs';
+import EventOne from './Pages/EventOne';
+import Career from './Pages/Career';
 
 const RoutingApp = () => {
     return ( <>
@@ -18,6 +20,8 @@ const RoutingApp = () => {
                <Route path="/faqs" element={<FAQZ />} />
                               <Route path="/blogs" element={<Blogs />} />
 
+                              <Route path="/events/" element={<EventOne />} />
+                                  <Route path="/career" element={<Career />} />
 
       </Routes>
     </Router>

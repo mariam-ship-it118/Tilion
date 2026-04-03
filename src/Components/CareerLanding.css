@@ -1,0 +1,115 @@
+:root{
+    --bg:#FFFCDD;
+    --primary:#0C1331;
+    --secondary:#E4E424;
+    --high-bleu: #247EE4;
+    --mid-blue:#34459C;
+    --light-blue: #EAEFFF;
+}
+
+/* Define core colors and fonts */
+@layer base {
+  :root {
+    --color-tillion-cream: #fbf9e3;
+    --color-tillion-dark-blue: #1b1e2c; /* Based on overlay color */
+    --color-tillion-blue: #3b5cb1; /* Based on logo */
+    --font-sans: 'Inter', sans-serif; /* Example clean font */
+    --font-career: 'Baskerville', 'Georgia', serif; /* A classic serif font to match image */
+  }
+}
+
+/* Custom class for the massive background text */
+.tillion-career-text {
+  font-family: var(--font-career);
+  font-size: clamp(8rem, 20vw, 30rem); /* Responsive font size */
+  color: #fff;
+  opacity: 0.1; /* High transparency */
+  line-height: 0.8;
+  letter-spacing: -0.04em;
+  margin: 0 auto;
+  pointer-events: none; /* Prevents text from being selected or blocking clicks */
+}
+
+/* Wavy Footer using a custom shape (e.g., as a CSS mask) */
+.wavy-footer {
+  width: 100%;
+  height: 250px;
+  background-color: var(--color-tillion-cream);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  mask-size: cover;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+/* --- ANIMATION KEYFRAMES --- */
+
+/* 1. Text fades down and appears first */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-text-in {
+  animation: fadeInDown 1.5s ease-out forwards;
+}
+
+/* 2. Man slides up, starts with a delay and is slightly behind the text in timing */
+@keyframes slideUpFade {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  30% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-man-in {
+  animation: slideUpFade 2s ease-out forwards;
+  animation-delay: 0.8s; /* Staggered entry */
+  opacity: 0; /* Ensures it's invisible before animation starts */
+}
+
+
+.bgz{
+    background-image: url(../Assets/careerbg.svg);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-top: -2%;
+
+}
+
+
+.careerT{
+    padding: 5%;
+    text-align: center;
+    color: var(--light-blue);
+    font-size: 17vw;
+  animation: fadeInDown 1s ease forwards;
+
+}
+
+.man{
+      animation: slideUpFade 1s ease forwards;
+  margin-left: 38%;
+  position: absolute;
+      margin-top: -48.6%;
+      width: 25%;
+      
+}

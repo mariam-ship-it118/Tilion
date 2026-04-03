@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Erica+One&family=Poppins:wght@400;500&display=swap');
+
+:root{
+    --bg:#FFFCDD;
+    --primary:#0C1331;
+    --secondary:#E4E424;
+    --high-bleu: #247EE4;
+    --mid-blue:#34459C;
+    --light-blue: #EAEFFF;
+}
+
+.career-section {
+  min-height: 100vh;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.career-heading {
+  color: var(--mid-blue); 
+  font-size: 3.5rem;
+font-family: broadway ;
+  letter-spacing: 2px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.career-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.role-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover Animation */
+.role-item:hover {
+  transform: translateY(-8px) scale(1.02);
+  background-color: var(--light-blue);
+  box-shadow: 0 15px 30px rgba(63, 78, 154, 0.15); 
+}
+
+.role-thumbnail {
+  background-color: #d1d5dc; 
+  width: 100%;
+  aspect-ratio: 1 / 1; 
+  margin-bottom: 20px;
+}
+
+.role-name {
+  color: var(--high-bleu); 
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: center;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* --- Responsive Breakpoints --- */
+
+@media (max-width: 900px) {
+  .career-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+  
+  .career-heading {
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .career-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 320px; 
+  }
+  
+  .career-heading {
+    font-size: 2.2rem;
+  }
+}

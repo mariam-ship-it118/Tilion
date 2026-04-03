@@ -1,0 +1,114 @@
+/* Base Section Styles */
+:root{
+    --bg:#FFFCDD;
+    --primary:#0C1331;
+    --secondary:#E4E424;
+    --high-bleu: #247EE4;
+    --mid-blue:#34459C;
+    --light-blue: #EAEFFF;
+}
+
+
+.highlights-section {
+  padding: 60px 20px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.highlights-container {
+  max-width: 1000px;
+  width: 100%;
+}
+
+.highlights-heading {
+  color: var(--primary); /* Dark navy */
+font-family: broadway;  
+font-weight: 500;
+font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 10%;
+  letter-spacing: 0.5px;
+}
+
+/* Grid Layout for Responsiveness */
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* Individual Card Styles */
+.highlight-card {
+  background-color: #e8f0ff; /* Light blue card background */
+  border: 1px solid #b8caf0;
+  padding: 50px 80px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  /* Initial state for fade-in animation */
+  opacity: 0;
+  animation: fadeIn 0.6s ease-out forwards;
+  
+  /* Smooth transition for hover effects */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hover Animation */
+.highlight-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(50, 70, 120, 0.15);
+  border-color: var(--mid-blue);
+}
+
+/* Icon Styles */
+.icona-wrapper {
+  color:var(--mid-blue);
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.icona-wrapper svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Typography inside cards */
+.card-title {
+    font-family: poppins;
+  color: var(--mid-blue);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+}
+
+.card-description {
+        font-family: poppins;
+  color: var(--primary);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Keyframes for the load-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Adjust heading alignment for smaller screens */
+@media (max-width: 768px) {
+  .highlights-heading {
+    text-align: center;
+    font-size: 2rem;
+  }
+}

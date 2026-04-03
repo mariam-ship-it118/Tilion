@@ -18,7 +18,7 @@ const AboutUs = () => {
   <ParentPeaceOfMind/>
   <SubHeadz headz="Our Team" />
   <OurTeam/>
-
+ 
   <Footer/>
 
   </> );

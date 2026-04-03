@@ -1,0 +1,140 @@
+/* Base Section Styles */
+.article-section {
+  background-color: #fcfce3;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Container for the 3-column layout */
+.article-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+}
+
+.layout-reversed {
+  flex-direction: row-reverse;
+}
+
+/* Common column styles */
+.article-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Paragraph styling */
+.article-paragraph {
+  color: #1a1e3a;
+  font-family: poppins;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* Image styling */
+.article-image-wrapper {
+  justify-content: center;
+  align-items: center;
+}
+
+.article-image {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+/* Heading styling */
+.article-heading {
+  align-items: flex-end;
+}
+
+.layout-reversed .article-heading {
+  align-items: flex-start;
+}
+
+.article-title {
+  color: #35459e;
+font-family: broadway;
+ font-weight: 500;
+font-size: clamp(2.5rem, 4vw, 4.5rem);
+  line-height: 1.1;
+  text-align: right;
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+.layout-reversed .article-title {
+  text-align: left;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+
+/* Tablet & Smaller Screens */
+@media (max-width: 960px) {
+  .article-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  /* Reset direction to column even if reverseLayout is true */
+  .layout-reversed {
+    flex-direction: column;
+  }
+
+  .article-heading {
+    order: 1;
+    align-items: center;
+    width: 100%;
+  }
+
+  .article-title {
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  /* Ensure text is centered on mobile even if reversed class is present */
+  .layout-reversed .article-title {
+    text-align: center;
+  }
+
+  .article-image-wrapper {
+    order: 2;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .article-text {
+    order: 3;
+    width: 100%;
+    max-width: 700px;
+  }
+
+  .article-paragraph {
+    text-align: center;
+  }
+}
+
+/* Mobile specifically */
+@media (max-width: 480px) {
+  .article-section {
+    padding: 40px 15px;
+  }
+  
+  .article-title {
+    font-size: 2.2rem;
+  }
+  
+  .article-paragraph {
+    font-size: 1rem;
+  }
+}

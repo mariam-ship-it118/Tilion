@@ -9,6 +9,7 @@ import EventOne from "../Assets/event1.svg";
 import Septwo from "../Assets/sep2.svg";
 import Sep from "../Assets/sep.svg";
 import Footer from '../Components/Footer';
+import { Link } from "react-router-dom";
 
 
 const EventsMain = () => {
@@ -22,13 +23,15 @@ const EventsMain = () => {
               <BannerText 
         outlineText="Creating" 
         solidText="Tomorrow" 
-      />     
+      />   
+      <Link to="">
       <HoverCard 
-        imageUrl={EventOne}
+        imageUrl={EventOne}  
         title="Create a magic book with your parent"
         time="from 5:00pm to 8:00pm"
         tag="Girls only"
-      />    
+        />    
+        </Link>  
  <img src={Septwo} alt="safe app fpr kids" className='separation' />
 
 <br /><br /><br />
