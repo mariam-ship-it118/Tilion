@@ -1,0 +1,394 @@
+/* Import Approximated Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Dancing+Script&family=Nunito:wght@400;700&display=swap');
+
+/* Basic Resets & Global Styles */
+:root{
+    --bg:#FFFCDD;
+    --primary:#0C1331;
+    --secondary:#E4E424;
+    --high-bleu: #247EE4;
+    --mid-blue:#34459C;
+    --light-blue: #EAEFFF;
+}
+
+
+/* Main Container - Ensures content is centered and takes full height */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* Content Area - Uses flexbox for the two-column layout */
+.login-content {
+  display: flex;
+  flex-direction: row; /* Default layout is side-by-side */
+  max-width: 1200px;
+  width: 100%;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* --- Left Column: Login Form Styles --- */
+.login-form-column {
+  flex: 1; /* Each column takes equal space on larger screens */
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.tillion-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.login-into-text {
+font-family: poppins;
+  font-size: 1.5rem;
+  color: #2c3e80;
+}
+
+.tillion-text {
+font-family: broadway; 
+font-weight: 500;
+font-size: 3rem;
+  color: #0d122b;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-field label {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.form-field input {
+  background-color: #ddd; /* Placeholder grey fill */
+  border: none;
+  border-radius: 4px;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+/* Specific styling to match custom fonts */
+.login-btn {
+  background-color: #0d122b;
+  color: #ffca28;
+  border: none;
+  border-radius: 4px;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+font-family: broadway;
+font-weight: 200;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.login-btn:hover {
+  background-color: #1a2350;
+}
+
+.forgot-password-link {
+  text-align: center;
+  color: #2c3e80;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.forgot-password-link:hover {
+  color: #1a2350;
+  text-decoration: underline;
+}
+
+.google-login-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-family: poppins;
+  background-color: #3f51b5;
+  color: #ffca28;
+  border: none;
+  border-radius: 4px;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.google-login-btn:hover {
+  background-color: #2c3e80;
+}
+
+.google-icon-placeholder {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Alternative approach if you have the asset */
+.google-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.create-account-btn {
+    font-family: poppins;
+  background-color: #faf8f0; /* Matches body bg */
+  color:var(--primary) ;
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.create-account-btn:hover {
+  background-color: #e6e0cc;
+}
+
+/* --- Right Column: Illustration Styles --- */
+.illustration-column {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contains everything in the right column, sets size and layering */
+.illustration-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 500px; /* Adjust based on your asset size */
+  aspect-ratio: 1 / 1; /* Maintains a square shape for better scaling */
+}
+
+/* Layering the collage components */
+.collage-layers {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+
+.collage-base {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.collage-base img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.placeholder-image-text {
+  font-size: 1.5rem;
+  color: #777;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Floating social media frame overlay */
+.social-frame-overlay {
+  position: absolute;
+  top: 15%;
+  right: 5%;
+  width: 20%;
+  height: 35%;
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 3px solid #ddd;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Universal styles for floating elements that scale relative to their parent */
+.floating-emoji {
+  position: absolute;
+  font-size: 2.5rem; /* Starting size, will scale on smaller screens */
+  transform-origin: center;
+  z-index: 10;
+}
+
+.crying-emoji {
+  top: 5%;
+  left: 2%;
+  transform: rotate(-12deg);
+}
+
+.heart-eye-emoji {
+  bottom: 8%;
+  right: 18%;
+  transform: rotate(8deg);
+}
+
+/* Scaling emoji for text bubbles */
+.small-emoji {
+  font-size: 1.25rem;
+}
+
+/* Universal styles for text bubbles */
+.text-bubble {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  background-color: #2c3e80; /* Dark blue from the image bubbles */
+  color: #fff;
+  font-weight: bold;
+  font-size: 0.875rem;
+  border-radius: 50px; /* Pill shape */
+  padding: 0.6rem 1.2rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 10;
+  white-space: nowrap;
+}
+
+.lets-go-bubble {
+  top: 45%;
+  left: -5%;
+}
+
+.wow-bubble {
+  top: 65%;
+  right: 0;
+}
+
+.sparkle {
+  color: #ffca28;
+}
+
+/* --- Responsive Media Queries --- */
+
+/* For Tablets and smaller landscape screens */
+@media (max-width: 992px) {
+  .login-content {
+    gap: 2rem;
+  }
+  
+  .tillion-text {
+    font-size: 2.5rem;
+  }
+}
+
+/* The primary breakpoint - switch to stacked layout for mobile devices */
+@media (max-width: 768px) {
+  .login-page {
+    padding: 1.5rem;
+  }
+  
+  .login-content {
+    flex-direction: column-reverse; /* Put illustration on top in mobile view, or standard stacked column */
+    /* If you want the illustration on top, use column-reverse and remove the below orders. 
+       If you want the form on top, use column and below orders. */
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  
+  .login-form-column {
+    order: 2; /* Forces the form to stack below on small screens if column is used above */
+    text-align: center; /* Center main text on mobile */
+    align-items: center;
+  }
+  
+  .tillion-logo {
+     align-items: center;
+  }
+  
+  .login-form {
+    width: 100%;
+    max-width: 400px; /* Keep form width controlled on wider mobile screens */
+  }
+  
+  .form-field {
+    text-align: left; /* Keep form inputs aligned to the left within the center context */
+  }
+  
+  /* Make buttons fill the form on mobile */
+  .login-btn,
+  .google-login-btn,
+  .create-account-btn {
+    width: 100%;
+  }
+
+  .illustration-column {
+    order: 1; /* Puts the illustration card on top */
+    max-width: 100%;
+  }
+  
+  .illustration-wrapper {
+    max-width: 320px; /* Scale down the main card size on mobile */
+  }
+  
+  /* Adjustments for floating elements on small card size to keep layout integrity */
+  .floating-emoji {
+    font-size: 2rem;
+  }
+  
+  .crying-emoji {
+    left: 5%;
+  }
+  
+  .text-bubble {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .lets-go-bubble {
+    left: 0;
+  }
+  
+  .wow-bubble {
+    right: 5%;
+  }
+}
+
+/* For very small devices */
+@media (max-width: 480px) {
+  .login-page {
+    padding: 1rem;
+  }
+  
+  .tillion-text {
+    font-size: 2rem;
+  }
+  
+  .illustration-wrapper {
+    max-width: 280px;
+  }
+  
+  .floating-emoji {
+    font-size: 1.5rem;
+  }
+}

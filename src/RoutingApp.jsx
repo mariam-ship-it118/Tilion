@@ -12,6 +12,8 @@ import Career from './Pages/Career';
 import EventsVerTwo from './Pages/EventOne';
 import EventsVerThree from './Pages/EventOne';
 import EventsVerOne from './Pages/EventTwo';
+import LoginPage from './Pages/Login';
+import LoginPageAr from './Pages/LoginAR';
 
 const RoutingApp = () => {
     return ( <>
@@ -27,6 +29,10 @@ const RoutingApp = () => {
          <Route path="/career" element={<Career />} />
 <Route path='/events/upcomming-events' element={<EventsVerThree/>}/>
 <Route path='/events/past-events' element={<EventsVerOne/>}/>
+      <Route path='/login' element={<LoginPage/>}/>}/>
+      <Route path='/login-ar' element={<LoginPageAr/>}/>}/>
+
+      
       </Routes>
     </Router>
     
