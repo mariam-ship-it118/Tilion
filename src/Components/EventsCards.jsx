@@ -20,7 +20,7 @@ const HoverCard = ({
         </div>
       </div>
     </div>
-    <button className='vmbtn'>View more</button>
+    {/* <button className='vmbtn'>View more</button> */}
     </>
   );
 };

@@ -11,6 +11,7 @@ const AboutUs = () => {
   return ( <>
   
   <NavBar/>
+  <br /><br /> <br /><br /><br /><br />
   <AboutMain/>
   <Features/>
   <AboutCompany/>
