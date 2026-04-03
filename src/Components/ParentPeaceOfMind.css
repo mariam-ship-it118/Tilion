@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+/* Note: Standard Broadway isn't on Google Fonts. Use a local file or a similar Display font */
+@font-face {
+    font-family: 'BroadwayAlternative';
+    src: url('https://fonts.cdnfonts.com/s/15414/Broadway.woff') format('woff');
+}
+:root{
+    --bg:#FFFCDD;
+    --primary:#0C1331;
+    --secondary:#E4E424;
+    --high-bleu: #247EE4;
+    --mid-blue:#34459C;
+    --light-blue: #EAEFFF;
+}
+
+.peace-container {
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-badge {
+  background-color: var(--mid-blue);
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.peace-title {
+  font-family: 'BroadwayAlternative', 'Arial Black', sans-serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--primary);
+  margin-bottom: 50px;
+  letter-spacing: -1px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns layout */
+  gap: 30px 40px;
+  text-align: left;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.check-icon {
+  min-width: 28px;
+  height: 28px;
+  border: 2px solid var(--high-bleu);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--high-bleu);
+  margin-top: 4px;
+}
+
+.check-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.feature-content h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--high-bleu);
+  margin: 0 0 4px 0;
+}
+
+.feature-content p {
+  font-size: 0.95rem;
+  color: var(--primary);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr; /* Stack to single column on mobile */
+    gap: 25px;
+    padding: 0 10px;
+  }
+  
+  .peace-title {
+    margin-bottom: 30px;
+  }
+}

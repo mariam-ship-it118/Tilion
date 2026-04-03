@@ -5,6 +5,8 @@ import {BrowserRouter, Link} from 'react-router-dom';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import EventsMain from './Pages/Events';
 import AboutUs from './Pages/AboutUs';
+import FAQZ from './Pages/FAQs';
+import Blogs from './Pages/Blogs';
 
 const RoutingApp = () => {
     return ( <>
@@ -13,6 +15,9 @@ const RoutingApp = () => {
         <Route path="/" element={<Home />} />
              <Route path="/events" element={<EventsMain />} />
              <Route path="/aboutus" element={<AboutUs />} />
+               <Route path="/faqs" element={<FAQZ />} />
+                              <Route path="/blogs" element={<Blogs />} />
+
 
       </Routes>
     </Router>

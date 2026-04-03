@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './NavBar.css';
 import Logo from '../Assets/logo.svg';
 import { Helmet } from "react-helmet";
-
+import { Link } from "react-router-dom";
 const NavBar = () => {
     return ( <>
 
@@ -15,11 +15,24 @@ const NavBar = () => {
         />
       </Helmet>
     <ul className='fixed navie'>
-        <li>Home</li>
+       <Link to="/">
+       <li>Home</li>
+       </Link> 
+
+       <Link to="/aboutus">
         <li>About</li>
+       </Link>
+       <Link to="/blogs">
+       <li>Blogs</li>
+       </Link>
         <li><img src={Logo} className='logonav' alt="Social media app for kids" /></li>
+       
+       <Link to="/events">
         <li>Events</li>
+       </Link>
+       <Link to="/faqs">
         <li>FAQs</li>
+       </Link>
         <li><button className='navbtns'>Login</button></li>
         <li><button className='navbtns'>ar</button></li>
     </ul>

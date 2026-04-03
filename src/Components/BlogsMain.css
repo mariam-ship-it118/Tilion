@@ -1,0 +1,126 @@
+:root{
+    --bg:#FFFCDD;
+    --primary:#0C1331;
+    --secondary:#E4E424;
+    --high-bleu: #247EE4;
+    --mid-blue:#34459C;
+    --light-blue: #EAEFFF;
+}
+
+/* BlogsTitleComponent.css */
+
+/* Full main section for background */
+.blogs-main-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Fluid center wrapper that controls overall scale */
+.blogs-center-wrapper {
+  position: relative;
+  /* Fluid width based on viewport, with constraints for large and small screens */
+  width: clamp(280px, 90vw, 1200px);
+  /* The SVG's responsive size is a direct scale of this wrapper */
+}
+
+/* Make the SVG itself responsive to its container */
+.blogs-title-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ==============================
+   Animation Keyframes
+   ============================== */
+
+/* Staggered slide-in from left to right, with elastic ease and a subtle drop */
+@keyframes letter-slide {
+  0% {
+    opacity: 0;
+    transform: translateX(-10vw) translateY(-2vh) scaleX(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) translateY(0) scaleX(1);
+  }
+}
+
+/* Star appears with a subtle "pop" inside the O, scaling up and then settling */
+@keyframes star-appear {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ==============================
+   Styling for specific parts
+   ============================== */
+
+/* Base class for animated letters and the 'o' container */
+.blogs-letter {
+  opacity: 0; /* Start hidden for staggered animation */
+  animation-name: letter-slide;
+  animation-duration: 0.7s;
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Elastic ease-out */
+  animation-fill-mode: forwards; /* Keep final state */
+  will-change: transform, opacity; /* For performance */
+}
+
+/* Unique delays for each letter group to create the "wave" staggered entry */
+#blogs_letter_B {
+  animation-delay: 0s;
+}
+#blogs_letter_l {
+  animation-delay: 0.15s;
+}
+#blogs_letter_o_container {
+  animation-delay: 0.3s;
+}
+#blogs_letter_g {
+  animation-delay: 0.45s;
+}
+#blogs_letter_s {
+  animation-delay: 0.6s;
+}
+
+/* Special styling for the 'o' and the stars */
+.o-container-group {
+  /* Ensure children (like the stars) are relative to this group */
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+/* The yellow star that pops up inside the O */
+.blogs-star {
+  opacity: 0; /* Hidden initially */
+  transform-box: fill-box; /* Transform from its own center */
+  transform-origin: center;
+  
+  /* Seperate animation for the star appearance, starting after the letters finish */
+  animation-name: star-appear;
+  animation-duration: 0.5s;
+  animation-delay: 1.3s; /* Significant delay for sequence */
+  animation-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1); /* Pronounced pop-up ease */
+  animation-fill-mode: forwards;
+  will-change: transform, opacity;
+}
+
+/* The light blue dashed path is always static */
+#blogs_wave_dashed_path {
+  /* No animation on the wave itself */
+}

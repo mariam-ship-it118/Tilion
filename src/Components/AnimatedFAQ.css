@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&display=swap');
+
+/* Main container (centered by default) */
+.faqs-animation-container {
+  display: flex;
+  align-items: baseline; /* Important for alignment of s and Star */
+  justify-content: center;
+  position: relative;
+  overflow: hidden; /* Recommended for enter animations */
+  padding: 10vh 20px; /* Vertical padding */
+  max-width: 100%;
+}
+
+/* Base style for the letters (final resting state) */
+.faqs-text-wrapper {
+  color: #1a1a1a; /* Very dark navy/charcoal */
+   font-family: broadway;  display: flex;
+  gap: 0;
+}
+
+/* Common style for each letter */
+.faq-letter {
+  display: inline-block;
+  opacity: 0; /* Initially hidden */
+  font-weight: 500;
+  transform-origin: left bottom; /* Important for specific rot/skew feel */
+  font-size: clamp(3rem, 12vw, 8rem); /* Fluid scaling from 3rem to 8rem */
+  letter-spacing: -2px;
+  line-height: 0.9;
+  
+  /* Apply the animation to each letter */
+  animation-name: waveSlideStop;
+  animation-duration: 0.8s;
+  animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1); /* Quick entry, slow settle */
+  animation-delay: var(--delay); /* Dynamic delay from JSX */
+  animation-fill-mode: forwards; /* Stops at the final frame */
+}
+
+/* Style for the last small 's' to match design */
+.faqs-text-wrapper .faq-letter:last-child {
+  font-size: clamp(2.2rem, 9vw, 6rem); /* Smaller final 's' */
+  align-self: flex-end; /* Sits lower than others */
+}
+
+/* Style for the yellow star graphic */
+.faq-star-icon {
+  opacity: 0; /* Initially hidden */
+  position: absolute;
+  top: 10%; /* Specific positioning relative to container */
+  left: calc(50% + 5vw); /* Dynamic placement near the 's' */
+  width: clamp(2rem, 6vw, 4rem); /* Star scales with text */
+  height: auto;
+  transform: translateY(100%) scale(0.2); /* Final position is (0,1) */
+
+  /* Separate entry animation for the star */
+  animation-name: starEnter;
+  animation-duration: 0.6s;
+  animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  animation-delay: var(--delay); /* From JSX */
+  animation-fill-mode: forwards;
+}
+
+/* The combined Wave-Slide-and-Stop Animation Keyframes */
+@keyframes waveSlideStop {
+  /* INITIAL FRAME (Hidden below, slightly skewed) */
+  0% {
+    opacity: 0;
+    transform: translateY(80%) skewX(10deg);
+  }
+  
+  /* MID-FRAME (Slide up, peak opacity, slight rotation) */
+  50% {
+    opacity: 1;
+    transform: translateY(-10%) rotate(-3deg);
+  }
+  
+  /* PEAK (The 'Wave' peak, overshooting the rest position) */
+  70% {
+    transform: translateY(5%) rotate(1deg);
+  }
+
+  /* FINAL FRAME (STOPS HERE, matches the design screenshot) */
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(0);
+  }
+}
+
+/* Entry keyframes for the star */
+@keyframes starEnter {
+  0% {
+    opacity: 0;
+    transform: translate(-10%, 100%) scale(0.2);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(0, -10%) scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+/* Mobile Responsiveness Override */
+@media (max-width: 600px) {
+  .faqs-animation-container {
+    padding: 6vh 15px;
+  }
+  
+  .faqs-text-wrapper .faq-letter:last-child {
+    font-size: clamp(1.8rem, 8vw, 5rem);
+ 
+  }
+  
+  /* Shift star closer to smaller text on mobile */
+  .faq-star-icon {
+    left: calc(50% + 12vw);
+  }
+}

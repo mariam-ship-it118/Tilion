@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+:root{
+    --bg:#FFFCDD;
+    --primary:#0C1331;
+    --secondary:#E4E424;
+    --high-bleu: #247EE4;
+    --mid-blue:#34459C;
+    --light-blue: #EAEFFF;
+}
+
+.our-team-section {
+  padding: 60px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.team-grid {
+  display: grid;
+  /* Auto-responsive grid: defines columns with min/max width */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  max-width: 1200px; /* Limits the max width of the entire grid */
+  margin: 0 auto; /* Centers the grid on larger screens */
+}
+
+/* Fallback for browsers without grid support (or just to structure) */
+@media (min-width: 1024px) {
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Ensures image squareness */
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Keeps image aspect ratio without stretching */
+  display: block;
+}
+
+/* Logo Overlay for Maram Omar's type */
+.logo-overlay {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-icon {
+  font-size: 2rem;
+  margin-bottom: -5px;
+}
+
+.logo-text {
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  color: var(--primary);
+}
+
+.member-details h3 {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--primary);
+  margin: 0 0 5px 0;
+}
+
+.member-details p {
+  color: var(--high-bleu); /* Matches the cyan/blue role text */
+  font-size: 0.95rem;
+  margin: 0;
+  text-transform: capitalize; /* Optional cleanup for 'Hr manager' -> 'Hr Manager' */
+}
+
+/* Responsive Overrides */
+@media (max-width: 768px) {
+  .team-grid {
+    gap: 25px;
+    padding: 0 10px;
+  }
+  
+  .member-details h3 {
+    font-size: 1.15rem;
+  }
+}
