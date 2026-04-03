@@ -12,13 +12,13 @@ import Footer from '../Components/Footer';
 import { Link } from "react-router-dom";
 
 
-const EventsVerThree = () => {
+const EventsVerOne = () => {
     return ( <>
     <NavBar active="events"/>
     
     <EventMain />
-    <EventsTypes submenuu="last"  menuone="Past" menutwo="Current" menuthree="Upcomming" />
-    <EventsTypes submenuu="last" menuone="Boys" menutwo="Girls" menuthree="Mix" />
+    <EventsTypes submenuu="first"  menuone="Past" menutwo="Current" menuthree="Upcomming" />
+    <EventsTypes submenuu="first" menuone="Boys" menutwo="Girls" menuthree="Mix" />
                <EvSecTitle sec="Online"/>
               <BannerText 
         outlineText="Creating" 
@@ -80,4 +80,4 @@ const EventsVerThree = () => {
     </> );
 }
  
-export default EventsVerThree;
+export default EventsVerOne;

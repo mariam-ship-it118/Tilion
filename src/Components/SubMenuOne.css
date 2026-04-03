@@ -21,7 +21,11 @@
 
 }
 
+.submenuu{
+  color: var(--high-bleu);
+}
+
 .well{
     margin-top: 5%;
-    color: var(--high-bleu);
+    color: var(--primary);
 }

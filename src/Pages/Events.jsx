@@ -17,8 +17,8 @@ const EventsMain = () => {
     <NavBar active="events"/>
     
     <EventMain />
-    <EventsTypes menuone="Past" menutwo="Current" menuthree="Upcomming" />
-    <EventsTypes menuone="Boys" menutwo="Girls" menuthree="Mix" />
+    <EventsTypes submenuu="middle"  menuone="Past" menutwo="Current" menuthree="Upcomming" />
+    <EventsTypes submenuu="middle" menuone="Boys" menutwo="Girls" menuthree="Mix" />
                <EvSecTitle sec="Online"/>
               <BannerText 
         outlineText="Creating" 
