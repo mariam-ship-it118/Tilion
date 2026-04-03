@@ -10,7 +10,7 @@ import Footer from '../Components/Footer';
 const AboutUs = () => {
   return ( <>
   
-  <NavBar/>
+  <NavBar active="aboutus"/>
   <br /><br /> <br /><br /><br /><br />
   <AboutMain/>
   <Features/>

@@ -20,7 +20,7 @@ const Home = () => {
     return ( <>
     
     <div class="loader"></div>
-    <NavBar/>
+    <NavBar active="home"/>
     {/* hero section */}
     <HeroSec/>
     <img src={Sep} className='widdy' alt="Social media app for kids" />

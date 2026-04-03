@@ -3,6 +3,7 @@ import FAQ from '../Components/FAQsAsk';
 import NavBar from '../Components/NavBar';
 import Footer from '../Components/Footer';
 import AnimatedFAQs from '../Components/AnimatedFAQ';
+import Sep from "../Assets/sep.svg";
 
 
 const myFaqs = [
@@ -59,9 +60,11 @@ const FAQZ = () => {
     return ( <>
     
     
-    <NavBar/>
+    <NavBar active="faqs"/>
 <AnimatedFAQs/>
     <FAQ  title="General questions" faqItems={myFaqs} />
+       <img src={Sep} className='widdy' alt="Social media app for kids" />
+
     <FAQ  title="Frequently asked questions" faqItems={myOtherFaqs} />
     <Footer/>
     </> );

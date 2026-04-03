@@ -5,10 +5,11 @@ import HoverCard from '../Components/EventsCards';
 import Blog1 from "../Assets/blog1.svg";
 import Blog2 from "../Assets/blog2.svg";
 import Blog3 from "../Assets/blog3.svg";
+import Septwo from "../Assets/sep2.svg";
 import Footer from '../Components/Footer';
 const Blogs = () => {
     return ( <>
-    <NavBar/>
+    <NavBar active="blogs"/>
     <BlogsTitleComponent/>
      <HoverCard 
         imageUrl={Blog1}
@@ -16,6 +17,7 @@ const Blogs = () => {
         time=""
         tag="Yesterday"
       /> 
+<img src={Septwo} alt="safe app fpr kids" className='separation' />
 
 <br /> <br />
 
@@ -25,6 +27,8 @@ const Blogs = () => {
         time=""
         tag="2 april"
       /> 
+
+<img src={Septwo} alt="safe app fpr kids" className='separation' />
 
 <br /> <br />
   <HoverCard 

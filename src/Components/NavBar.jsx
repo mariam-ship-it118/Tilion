@@ -3,7 +3,7 @@ import './NavBar.css';
 import Logo from '../Assets/logo.svg';
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
-const NavBar = () => {
+const NavBar = (props) => {
     return ( <>
 
      <Helmet>
@@ -14,24 +14,24 @@ const NavBar = () => {
           rel="stylesheet"
         />
       </Helmet>
-    <ul className='fixed navie'>
+    <ul className='fixed navie  '>
        <Link to="/">
-       <li>Home</li>
+       <li className={props.active ==="home"? "active" :""}>Home</li>
        </Link> 
 
        <Link to="/aboutus">
-        <li>About</li>
+        <li className={props.active ==="aboutus"? "active" :""}>About</li>
        </Link>
        <Link to="/blogs">
-       <li>Blogs</li>
+       <li className={props.active ==="blogs"? "active" :""}>Blogs</li>
        </Link>
         <li><img src={Logo} className='logonav' alt="Social media app for kids" /></li>
        
        <Link to="/events">
-        <li>Events</li>
+        <li className={props.active ==="events"? "active" :""}>Events</li>
        </Link>
        <Link to="/faqs">
-        <li>FAQs</li>
+        <li className={props.active ==="faqs"? "active" :""}>FAQs</li>
        </Link>
         <li><button className='navbtns'>Login</button></li>
         <li><button className='navbtns'>ar</button></li>

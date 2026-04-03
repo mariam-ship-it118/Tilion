@@ -16,6 +16,55 @@
     
 }
 
+
+
+
+
+.li {
+  text-decoration: none;
+}
+
+/* Layout */
+.active{
+     color: var(--high-bleu);
+   font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* .fixed{
     position: fixed;
 } */

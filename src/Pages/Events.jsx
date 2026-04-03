@@ -13,7 +13,7 @@ import Footer from '../Components/Footer';
 
 const EventsMain = () => {
     return ( <>
-    <NavBar/>
+    <NavBar active="events"/>
     
     <EventMain />
     <EventsTypes menuone="Past" menutwo="Current" menuthree="Upcomming" />
