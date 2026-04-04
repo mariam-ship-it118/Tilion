@@ -31,8 +31,8 @@ const RoutingApp = () => {
 <Route path='/events/past-events' element={<EventsVerOne/>}/>
       <Route path='/login' element={<LoginPage/>}/>}/>
       <Route path='/login-ar' element={<LoginPageAr/>}/>}/>
-
-      
+    
+    
       </Routes>
     </Router>
     

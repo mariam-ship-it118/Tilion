@@ -80,11 +80,13 @@ const LoginPageAr = () => {
             </div>
           </div>
           
+          
         </div>
       </div>
       <Footer/>
     </div>
   );
+
 };
 
 export default LoginPageAr;

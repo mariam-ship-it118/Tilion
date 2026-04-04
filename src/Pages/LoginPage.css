@@ -76,12 +76,13 @@ font-size: 3rem;
 }
 
 .form-field input {
-  background-color: #ddd; /* Placeholder grey fill */
-  border: none;
-  border-radius: 4px;
   padding: 0.8rem 1.2rem;
   font-size: 1rem;
-  font-family: 'Nunito', sans-serif;
+  border-top: none;
+  border-left: none;
+  border-right:none ;
+  background-color: transparent;
+  font-family: poppins;
 }
 
 /* Specific styling to match custom fonts */
