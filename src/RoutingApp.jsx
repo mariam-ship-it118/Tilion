@@ -7,9 +7,8 @@ import EventsMain from './Pages/Events';
 import AboutUs from './Pages/AboutUs';
 import FAQZ from './Pages/FAQs';
 import Blogs from './Pages/Blogs';
-import EventOne from './Pages/EventOne';
 import Career from './Pages/Career';
-import EventsVerTwo from './Pages/EventOne';
+
 import EventsVerThree from './Pages/EventOne';
 import EventsVerOne from './Pages/EventTwo';
 import LoginPage from './Pages/Login';

@@ -15,11 +15,11 @@ import FAQsHome from '../Components/FAQsHome';
 import Contact from '../Components/Contact';
 import Footer from '../Components/Footer';
 
-
 const Home = () => {
     return ( <>
+
     
-    <div class="loader"></div>
+    <div className="loader "></div>
     <NavBar active="home"/>
     {/* hero section */}
     <HeroSec/>
@@ -70,3 +70,4 @@ const Home = () => {
 }
  
 export default Home;
+

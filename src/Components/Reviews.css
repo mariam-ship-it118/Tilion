@@ -22,7 +22,7 @@
 .scroll-content {
 
    width: fit-content;
-  animation: scroll-left 20s linear infinite; 
+  animation: scroll-left 2s linear infinite; 
   width: 30%;
 }
 

@@ -1,5 +1,5 @@
-/* HTML: <div class="loader"></div> */
-.loader {
+/* Full screen preloader */
+.kz7x9p2 {
   width: 50px;
   aspect-ratio: 1;
   --c:no-repeat radial-gradient(farthest-side,#514b82 92%,#0000);
@@ -9,10 +9,15 @@
     var(--c) 100% 50%, 
     var(--c) 0    50%;
   background-size: 10px 10px;
-  animation: l18 1s infinite;
-  position: relative;
+  animation: qm4v8n1 1s infinite;
+  position: fixed !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999999 !important;
 }
-.loader::before {    
+
+.kz7x9p2::before {    
   content:"";
   position: absolute;
   inset:0;
@@ -21,7 +26,24 @@
   -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 3px),#000 0);
   border-radius: 50%;
 }
-@keyframes l18 { 
+
+/* Full screen overlay */
+.xp2q8m5 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.98);
+  z-index: 999998;
+}
+
+@keyframes qm4v8n1 { 
   100%{transform: rotate(.5turn)}
 }
 
+.fade-out {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transition: opacity 0.3s ease;
+}
