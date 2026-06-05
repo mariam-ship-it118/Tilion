@@ -1,51 +1,186 @@
-:root{
-    --bg:#FFFCDD;
-    --primary:#0C1331;
-    --secondary:#E4E424;
-    --high-bleu: #247EE4;
-    --mid-blue:#34459C;
-    --light-blue: #EAEFFF;
+:root {
+  --bg: #FFFCDD;
+  --primary: #0C1331;
+  --secondary: #E4E424;
+  --high-bleu: #247EE4;
+  --mid-blue: #34459C;
+  --accent-blue: #60A5FA;
 }
-.servhead{
-    font-family: broadway;
-    font-weight: 500;
-    font-size: 2vw;
+
+.services-section {
+  background: var(--bg);
+  padding: clamp(2rem, 5vw, 4rem) clamp(1.25rem, 5vw, 3rem);
+}
+
+.services-wave {
+  display: block;
+  width: 100%;
+  max-width: 1100px;
+  height: 24px;
+  margin: 0 auto;
+}
+
+.services-wave-bottom {
+  margin-top: clamp(2rem, 4vw, 3rem);
+}
+
+.services-heading-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: clamp(1.5rem, 3vw, 2.5rem) auto clamp(2.5rem, 5vw, 4rem);
+}
+
+.services-heading-wrap::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(280px, 90%);
+  height: 2px;
+  background: var(--accent-blue);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.services-heading {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  font-family: broadway, sans-serif;
+  font-weight: 500;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
   color: var(--primary);
+  margin: 0;
+  text-align: center;
 }
 
-.servpara{
-    color: var(--primary);
+.services-star {
+  position: absolute;
+  top: -0.1em;
+  right: -0.55em;
+  width: 0.45em;
+  height: auto;
+  z-index: 2;
 }
 
-.Thetitle{
-    display: flex;
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: start;
 }
 
-.card-serv{
-    width: 30%;
+.service-card {
+  opacity: 1;
+  transform: none;
 }
 
-.disa{
-    display: flex;
-    margin-left: 5%;
+.service-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: clamp(0.75rem, 1.5vw, 1.25rem);
 }
 
-.separation{
-      display: block;
+.service-title-row img {
+  width: clamp(52px, 6vw, 76px);
+  height: auto;
+  flex-shrink: 0;
+  transform: none;
+}
+
+.service-title {
+  font-family: broadway, sans-serif;
+  font-weight: 500;
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  color: var(--primary);
+  margin: 0;
+  line-height: 1;
+}
+
+.service-para {
+  font-family: poppins, sans-serif;
+  font-size: clamp(0.9rem, 1.3vw, 1.05rem);
+  line-height: 1.6;
+  color: var(--primary);
+  margin: 0;
+  text-align: left;
+}
+
+/* Hover — desktop only */
+@media (hover: hover) and (min-width: 769px) {
+  .service-card {
+    transition: transform 0.45s ease, opacity 0.45s ease;
+    opacity: 0.85;
+    transform: translateY(8px);
+  }
+
+  .service-title-row img {
+    transition: transform 0.45s ease;
+  }
+
+  .services-section:hover .service-card {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .services-section:hover .service-card:nth-child(1) {
+    transition-delay: 0s;
+  }
+
+  .services-section:hover .service-card:nth-child(2) {
+    transition-delay: 0.08s;
+  }
+
+  .services-section:hover .service-card:nth-child(3) {
+    transition-delay: 0.16s;
+  }
+
+  .services-section:hover .service-card:hover img {
+    transform: scale(1.06);
+  }
+
+  .services-wave path {
+    transition: stroke-dashoffset 0.6s ease;
+    stroke-dashoffset: 40;
+  }
+
+  .services-section:hover .services-wave path {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    max-width: 480px;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .services-section {
+    padding: 1.75rem 1rem;
+  }
+
+  .services-heading-wrap {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Used elsewhere on HomePage */
+.separation {
+  display: block;
   margin: 0 auto;
   margin-top: 5%;
 }
 
-
-.center{
-    width: 80%;
-    margin-left: 10%;
-    margin-top: 5%;
-    text-align: center;
-}
-
-.arimg{
-    width: 100%;
-    margin: 0;
-    margin-top: 5%;
+.arimg {
+  width: 100%;
+  margin: 0;
+  margin-top: 5%;
 }

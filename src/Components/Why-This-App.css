@@ -1,0 +1,135 @@
+:root {
+  --bg: #FFFCDD;
+  --primary: #0C1331;
+  --accent-blue: #60A5FA;
+}
+
+.why-section {
+  background: var(--bg);
+  padding: clamp(3rem, 7vw, 6rem) clamp(1.25rem, 5vw, 3rem);
+  position: relative;
+  overflow: hidden;
+}
+
+.why-section::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: clamp(280px, 55vw, 520px);
+  height: clamp(280px, 55vw, 520px);
+  border: 2px solid rgba(96, 165, 250, 0.15);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.why-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  opacity: 1;
+  transform: none;
+}
+
+.why-heading-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.why-heading-wrap::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(320px, 85%);
+  height: 2px;
+  background: var(--accent-blue);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.why-heading {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  font-family: broadway, sans-serif;
+  font-weight: 500;
+  font-size: clamp(2.25rem, 5.5vw, 4rem);
+  color: var(--primary);
+  margin: 0;
+  line-height: 1.1;
+}
+
+.why-star {
+  position: absolute;
+  top: -0.1em;
+  right: -0.45em;
+  width: 0.4em;
+  height: auto;
+}
+
+.why-text {
+  font-family: poppins, sans-serif;
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  line-height: 1.75;
+  color: var(--primary);
+  margin: 0 auto;
+  text-align: center;
+  max-width: 680px;
+}
+
+/* Hover — desktop only */
+@media (hover: hover) and (min-width: 769px) {
+  .why-inner {
+    transition: transform 0.55s ease, opacity 0.55s ease;
+    opacity: 0.8;
+    transform: translateY(16px);
+  }
+
+  .why-heading {
+    transition: transform 0.5s ease;
+  }
+
+  .why-star {
+    transition: transform 0.4s ease;
+  }
+
+  .why-section:hover .why-inner {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .why-section:hover .why-heading {
+    transform: scale(1.02);
+  }
+
+  .why-section:hover .why-star {
+    transform: scale(1.15) rotate(10deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .why-section {
+    padding: clamp(2.5rem, 8vw, 4rem) clamp(1rem, 4vw, 1.5rem);
+  }
+
+  .why-text {
+    text-align: center;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .why-section {
+    padding: 2.5rem 1rem;
+  }
+
+  .why-heading-wrap {
+    margin-bottom: 1.25rem;
+  }
+}
